@@ -1,0 +1,144 @@
+Ana örneklem: 2018-01 .. 2024-12 (84 ay); tahmin örneklemi 2018-05 başlangıçlı
+
+T2 Birim kök:
+               Değişken         Seri  ADF istatistik  ADF p  ADF gecikme  KPSS istatistik  KPSS p (≥/≤ tablo sınırı)  ZA istatistik  ZA p ZA kırılma tarihi
+          ln Hal fiyatı        Düzey          -3.308  0.015            0            0.331                      0.100         -4.433 0.141           2022-10
+          ln Hal fiyatı Birinci fark          -8.959  0.000            1            0.166                      0.100            NaN   NaN               NaN
+ln İhracat birim değeri        Düzey          -2.866  0.050            0            0.542                      0.032         -4.607 0.091           2021-05
+ln İhracat birim değeri Birinci fark          -9.473  0.000            0            0.106                      0.100            NaN   NaN               NaN
+             ln USD/TRY        Düzey          -0.443  0.903            1            1.467                      0.010         -4.266 0.207           2021-10
+             ln USD/TRY Birinci fark          -6.743  0.000            1            0.083                      0.100            NaN   NaN               NaN
+
+T3 Seçilen gecikmeler (BIC): ARDL p=1, q=1 ; NARDL p=1, q=1
+
+T4 Sınır testi:
+                   0      1
+Model           ARDL  NARDL
+k                  2      3
+n                 80     80
+F istatistiği  3.299  2.395
+t_BDM (ρ)     -2.767 -2.583
+F KD %10 I(0)  3.244  2.794
+F KD %10 I(1)  4.205  3.878
+t KD %10 I(0) -2.577 -2.571
+t KD %10 I(1) -3.201 -3.448
+F KD %5 I(0)   3.922  3.324
+F KD %5 I(1)   4.991  4.558
+t KD %5 I(0)  -2.895 -2.882
+t KD %5 I(1)  -3.527 -3.806
+F KD %1 I(0)   5.499  4.513
+F KD %1 I(1)   6.737  6.105
+t KD %1 I(0)  -3.502 -3.501
+t KD %1 I(1)  -4.173 -4.473
+F p (I(0))     0.095  0.162
+F p (I(1))     0.219  0.393
+t p (I(0))     0.067  0.098
+t p (I(1))      0.21  0.351
+
+T5 Katsayılar:
+Model      Bölüm        Değişken  Katsayı  Std.hata       t      p Anlamlılık
+ ARDL Uzun dönem             lnX   0.2620    0.2624  0.9984 0.3219           
+ ARDL Uzun dönem            lnER   0.1546    0.1070  1.4445 0.1536           
+ ARDL    ECT (ρ)          lnH.L1  -0.1936    0.0700 -2.7669 0.0074        ***
+ ARDL Düzey (L1)          lnX.L1   0.0507    0.0574  0.8827 0.3807           
+ ARDL Düzey (L1)         lnER.L1   0.0299    0.0183  1.6365 0.1067           
+ ARDL Kısa dönem        D.lnX.L0   0.0513    0.0730  0.7031 0.4846           
+ ARDL Kısa dönem       D.lnER.L0  -1.1436    0.2186 -5.2315 0.0000        ***
+ ARDL       Uyum R2 / düz.R2 / N   0.7437    0.6786 80.0000    NaN           
+NARDL Uzun dönem              Xp   0.2585    0.2862  0.9032 0.3700           
+NARDL Uzun dönem              Xn   0.2127    0.3987  0.5335 0.5956           
+NARDL Uzun dönem            lnER   0.0659    0.4502  0.1464 0.8841           
+NARDL    ECT (ρ)          lnH.L1  -0.1895    0.0733 -2.5830 0.0122         **
+NARDL Düzey (L1)           Xp.L1   0.0490    0.0613  0.7990 0.4274           
+NARDL Düzey (L1)           Xn.L1   0.0403    0.0821  0.4908 0.6254           
+NARDL Düzey (L1)         lnER.L1   0.0125    0.0863  0.1446 0.8855           
+NARDL Kısa dönem         D.Xp.L0   0.0646    0.1554  0.4158 0.6790           
+NARDL Kısa dönem         D.Xn.L0   0.0298    0.1579  0.1886 0.8510           
+NARDL Kısa dönem       D.lnER.L0  -1.1517    0.2346 -4.9101 0.0000        ***
+NARDL       Uyum R2 / düz.R2 / N   0.7439    0.6683 80.0000    NaN           
+ARDL: ρ = -0.194, yarı ömür ≈ 3.2 ay
+NARDL: ρ = -0.189, yarı ömür ≈ 3.3 ay
+
+T6 Asimetri:
+                           Test  θ⁺ / Σδ⁺  θ⁻ / Σδ⁻      F      p
+  Uzun dönem asimetri (θ⁺ = θ⁻)    0.2585    0.2127 0.0425 0.8373
+Kısa dönem asimetri (Σδ⁺ = Σδ⁻)    0.0646    0.0298 0.0163 0.8989
+
+T7 Depolama etkisi:
+                                Katsayı  Std.hata        p  Std.hata (HAC)  p (HAC)
+const                           -0.1299    0.1522   0.3965          0.0628   0.0386
+ECT.L1                          -0.3036    0.0891   0.0012          0.1253   0.0154
+ECTxS                            0.1831    0.1504   0.2282          0.1374   0.1826
+D.Xp                             0.1579    0.1791   0.3814          0.1272   0.2146
+D.Xn                            -0.0438    0.2031   0.8300          0.2112   0.8357
+D.XpxS                           0.3431    0.4204   0.4176          0.2327   0.1403
+D.XnxS                          -0.1758    0.4443   0.6937          0.2548   0.4902
+D.lnH.L1                         0.1527    0.1251   0.2270          0.0672   0.0231
+Wald: λ_S = φ⁺ = φ⁻ = 0 (F, p)   0.6938       NaN   0.5594             NaN      NaN
+R2 / N                           0.6539       NaN  80.0000             NaN      NaN
+
+T8 Tanı testleri:
+Model                    Test  İstatistik      p
+ ARDL Breusch-Godfrey LM (12)      0.3861 0.9626
+ ARDL            ARCH LM (12)      0.3849 0.9635
+ ARDL           Breusch-Pagan      2.6543 0.0030
+ ARDL             Jarque-Bera     21.8905 0.0000
+ ARDL     Ramsey RESET (kare)     22.7875 0.0000
+NARDL Breusch-Godfrey LM (12)      0.4891 0.9114
+NARDL            ARCH LM (12)      0.3894 0.9618
+NARDL           Breusch-Pagan      2.9175 0.0009
+NARDL             Jarque-Bera     21.3381 0.0000
+NARDL     Ramsey RESET (kare)     25.9160 0.0000
+
+NARDL |std. kalıntı| > 2.5 olan aylar: 2018-07 (2.84), 2022-07 (-3.03)
+
+T9a Huber:
+Değişken (uzun dönem)  NARDL-OLS  NARDL-Huber
+                   Xp     0.2585       0.1713
+                   Xn     0.2127       0.2930
+                 lnER     0.0659       0.4036
+              ρ (ECT)    -0.1895      -0.1927
+
+T9c Çeşit düzeyi:
+   Çeşit p,q  Sınır F  p (I(1))   θ_lnX  θ_lnX p       ρ    ρ p
+Starking 1,1   3.6466    0.1646 -0.0407   0.8706 -0.2145 0.0032
+  Golden 1,1   4.0916    0.1112  0.2115   0.3407 -0.1766 0.0034
+
+CUSUM sınır aşımı: False ; CUSUMSQ sınır aşımı: False
+
+T10 Alternatif tanım (kur yalnızca kısa dönem):
+                        0          1
+Model            ARDL-alt  NARDL-alt
+p,q                   1,1        1,2
+n                      80         80
+F                  3.5166     4.5573
+t_BDM             -2.6449    -3.0899
+F KD %10 I(0)      4.1304     3.2442
+F KD %10 I(1)      4.8823     4.2051
+t KD %10 I(0)     -2.5804    -2.5767
+t KD %10 I(1)     -2.9307    -3.2008
+F KD %5 I(0)       5.0908      3.922
+F KD %5 I(1)       5.9066     4.9912
+t KD %5 I(0)      -2.8881    -2.8948
+t KD %5 I(1)      -3.2488    -3.5272
+F KD %1 I(0)       7.3668     5.4988
+F KD %1 I(1)       8.3861     6.7371
+t KD %1 I(0)      -3.5306    -3.5019
+t KD %1 I(1)      -3.9266    -4.1728
+F p (I(0))         0.1543     0.0262
+F p (I(1))         0.2372     0.0729
+t p (I(0))         0.0887       0.03
+t p (I(1))         0.1673     0.1226
+ρ                 -0.1872    -0.2104
+ΔlnER katsayısı   -1.1325     -1.081
+ΔlnER p               0.0        0.0
+θ_lnX               0.477        NaN
+θ_lnX p            0.0442        NaN
+θ_Xp                  NaN     0.5456
+θ_Xp p                NaN     0.0384
+θ_Xn                  NaN     0.4834
+θ_Xn p                NaN     0.0888
+LR asimetri F         NaN     2.3306
+LR asimetri p         NaN     0.1321
+SR asimetri F         NaN     4.8598
+SR asimetri p         NaN     0.0313

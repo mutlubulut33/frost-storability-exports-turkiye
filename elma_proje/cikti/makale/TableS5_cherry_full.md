@@ -1,0 +1,16 @@
+| Outcome                                  | Treated             | Comparison group     | Season   | β      | HAC s.e.   | p      | Effect (%)   | Placebo β range 2019-2024   | Placebos with |β| ≥ actual (of 6)   |
+|:-----------------------------------------|:--------------------|:---------------------|:---------|:-------|:-----------|:-------|:-------------|:----------------------------|:------------------------------------|
+| Export quantity                          | Sweet cherry        | Citrus               | 2025     | -1.530 | 0.811      | 0.059  | -78.4        | -1.113 .. 1.259             | 0                                   |
+| Export quantity                          | Sweet cherry        | Citrus               | 2026     | -0.098 | 0.521      | 0.851  | -9.3         | -1.113 .. 1.259             | 6                                   |
+| Export quantity                          | Sweet cherry        | Melon and watermelon | 2025     | -3.999 | 1.328      | 0.003  | -98.2        | -0.728 .. 0.607             | 0                                   |
+| Export quantity                          | Sweet cherry        | Melon and watermelon | 2026     | -0.713 | 0.220      | 0.001  | -51.0        | -0.728 .. 0.607             | 2                                   |
+| Export quantity                          | Sweet + sour cherry | Citrus               | 2025     | -1.529 | 0.810      | 0.059  | -78.3        | -1.102 .. 1.256             | 0                                   |
+| Export quantity                          | Sweet + sour cherry | Citrus               | 2026     | -0.100 | 0.519      | 0.847  | -9.5         | -1.102 .. 1.256             | 6                                   |
+| Export unit value (USD)                  | Sweet cherry        | Citrus               | 2025     | -0.292 | 0.117      | 0.012  | -25.3        | -0.136 .. 0.186             | 0                                   |
+| Export unit value (USD)                  | Sweet cherry        | Citrus               | 2026     | -0.855 | 0.232      | <0.001 | -57.5        | -0.136 .. 0.186             | 0                                   |
+| Export unit value (USD)                  | Sweet cherry        | Melon and watermelon | 2025     | 0.608  | 0.079      | <0.001 | 83.6         | -0.285 .. 0.334             | 0                                   |
+| Export unit value (USD)                  | Sweet cherry        | Melon and watermelon | 2026     | 0.014  | 0.085      | 0.871  | 1.4          | -0.285 .. 0.334             | 6                                   |
+| Triple difference: exports vs. wholesale | Sweet cherry        | Citrus               | 2025     | 0.540  | 0.288      | 0.061  | 71.6         | -0.695 .. 0.671             | 3                                   |
+| Triple difference: exports vs. wholesale | Sweet cherry        | Citrus               | 2026     | 0.045  | 0.250      | 0.858  | 4.6          | -0.695 .. 0.671             | 6                                   |
+
+Note: Equation (3); May-July 2018-2026, N = 27. Newey-West HAC standard errors, 2 lags. Placebos: each 2018-2024 season except 2018 treated in turn, estimated on 2018-2024 data.

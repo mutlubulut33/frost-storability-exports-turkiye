@@ -1,0 +1,56 @@
+Tüm örneklem 2018-01 .. 2026-08; don sonrası 17 ay
+
+K1 Don etkisi:
+                      Bağımlı Trend  δ (DON)  Std.hata (HAC)      p  Yüzde etki (ln ise, %)  Ön dönem ort.  Don sonrası ort.   N
+           ln İhracat miktarı   Yok  -1.3923          0.2861 0.0000                -75.1502        10.0172            8.5989 104
+           ln İhracat miktarı   Var  -1.6687          0.3334 0.0000                -81.1500        10.0172            8.5989 104
+                 ln Hal hacmi   Yok  -0.3267          0.0779 0.0000                -27.8701        11.8578           11.3973 104
+                 ln Hal hacmi   Var  -0.6280          0.1024 0.0000                -46.6321        11.8578           11.3973 104
+          ln Hal fiyatı (USD)   Yok   0.8421          0.0699 0.0000                132.1215        -0.7834            0.0753 104
+          ln Hal fiyatı (USD)   Var   0.6707          0.1166 0.0000                 95.5660        -0.7834            0.0753 104
+ln İhracat birim değeri (USD)   Yok   1.0731          0.1439 0.0000                192.4379        -0.7759            0.2916 104
+ln İhracat birim değeri (USD)   Var   0.7599          0.1592 0.0000                113.8000        -0.7759            0.2916 104
+    ln (Hal / ihracat fiyatı)   Yok  -0.2310          0.1820 0.2044                -20.6254        -0.0075           -0.2163 104
+    ln (Hal / ihracat fiyatı)   Var  -0.0891          0.1907 0.6401                 -8.5285        -0.0075           -0.2163 104
+          İhracat / hal hacmi   Yok  -0.1003          0.0160 0.0000                     NaN         0.1748            0.0875 104
+          İhracat / hal hacmi   Var  -0.0979          0.0206 0.0000                     NaN         0.1748            0.0875 104
+
+K2 Kestirim Chow testi:
+         Model Ön örneklem sonu  n1      Test dönemi  n2  k  Chow F      p
+ ANA-ARDL(1,1)          2025-03  83 2025-04..2026-08  17 17  0.7700 0.7194
+ ANA-ARDL(1,1)          2024-12  80 2025-04..2026-08  17 17  0.7830 0.7050
+ALT-NARDL(1,2)          2025-03  83 2025-04..2026-08  17 20  1.2936 0.2262
+ALT-NARDL(1,2)          2024-12  80 2025-04..2026-08  17 20  1.2471 0.2585
+
+K3 Tahmin hataları (ΔlnH):
+         Model                       Dönem  N  Ortalama hata   RMSE    MAE  |hata| > 2σ olan ay sayısı
+ ANA-ARDL(1,1)   Don öncesi (örneklem içi) 83        -0.0000 0.0831 0.0595                           4
+ ANA-ARDL(1,1) Don sonrası (örneklem dışı) 17         0.0358 0.1017 0.0798                           1
+ALT-NARDL(1,2)   Don öncesi (örneklem içi) 83         0.0000 0.0773 0.0590                           4
+ALT-NARDL(1,2) Don sonrası (örneklem dışı) 17        -0.0821 0.1864 0.1347                           4
+
+K4 Don etkileşimleri:
+         Model                          Katsayı   Değer  Std.hata      p  p (HAC)
+ ANA-ARDL(1,1)                           lnH.L1 -0.1440    0.0618 0.0222   0.0214
+ ANA-ARDL(1,1)                           lnX.L1  0.0057    0.0516 0.9125   0.9191
+ ANA-ARDL(1,1)                              DON  0.0655    0.0518 0.2096   0.0567
+ ANA-ARDL(1,1)                       DONxlnH.L1 -0.1527    0.1827 0.4059   0.1916
+ ANA-ARDL(1,1)                       DONxlnX.L1  0.0052    0.0842 0.9511   0.9583
+ ANA-ARDL(1,1)      Wald: tüm DON terimleri = 0  0.7595       NaN 0.5201      NaN
+ ANA-ARDL(1,1)                   ρ (don öncesi) -0.1440       NaN    NaN      NaN
+ ANA-ARDL(1,1) ρ (don sonrası) = ρ + DON×lnH.L1 -0.2966    0.1709 0.0865      NaN
+ALT-NARDL(1,2)                           lnH.L1 -0.1431    0.0616 0.0229   0.0200
+ALT-NARDL(1,2)                            Xp.L1  0.0217    0.0551 0.6954   0.7194
+ALT-NARDL(1,2)                            Xn.L1  0.0028    0.0590 0.9626   0.9651
+ALT-NARDL(1,2)                              DON  0.6700    0.2593 0.0117   0.0000
+ALT-NARDL(1,2)                       DONxlnH.L1  0.1442    0.2156 0.5055   0.2768
+ALT-NARDL(1,2)                        DONxXp.L1 -0.0584    0.0879 0.5090   0.5446
+ALT-NARDL(1,2)                        DONxXn.L1  0.0426    0.0900 0.6378   0.6469
+ALT-NARDL(1,2)      Wald: tüm DON terimleri = 0  1.9600       NaN 0.1092      NaN
+ALT-NARDL(1,2)                   ρ (don öncesi) -0.1431       NaN    NaN      NaN
+ALT-NARDL(1,2) ρ (don sonrası) = ρ + DON×lnH.L1  0.0011    0.2065 0.9957      NaN
+
+K5 CUSUM tüm örneklem:
+         Model  Sınır aşımı İlk aşım
+ ANA-ARDL(1,1)         True  2025-12
+ALT-NARDL(1,2)        False        -

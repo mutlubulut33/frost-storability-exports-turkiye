@@ -1,0 +1,12 @@
+| Marketing year   | Apple wholesale volume (kt)   | Apple exports (kt)   | Exports / wholesale (%)   | Apple wholesale price (USD/kg)   | Apple export unit value (USD/kg)   | Citrus wholesale volume (kt)   | Citrus exports (kt)   |
+|:-----------------|:------------------------------|:---------------------|:--------------------------|:---------------------------------|:-----------------------------------|:-------------------------------|:----------------------|
+| 2018/19          | 1619                          | 285.3                | 17.6                      | 0.26                             | 0.31                               | 6031                           | 1736                  |
+| 2019/20          | 1687                          | 202.3                | 12.0                      | 0.28                             | 0.50                               | 6578                           | 1677                  |
+| 2020/21          | 1905                          | 297.7                | 15.6                      | 0.27                             | 0.53                               | 6878                           | 1876                  |
+| 2021/22          | 2258                          | 387.7                | 17.2                      | 0.23                             | 0.45                               | 8511                           | 2244                  |
+| 2022/23          | 2253                          | 395.7                | 17.6                      | 0.27                             | 0.42                               | 6560                           | 1712                  |
+| 2023/24          | 2147                          | 327.1                | 15.2                      | 0.32                             | 0.59                               | 8144                           | 2064                  |
+| 2024/25          | 1921                          | 211.8                | 11.0                      | 0.43                             | 0.87                               | 6391                           | 1327                  |
+| 2025/26          | 1251                          | 57.7                 | 4.6                       | 0.75                             | 1.56                               | 7565                           | 1668                  |
+
+Note: Marketing year = August-July. Wholesale price = volume-weighted HKS price converted at the monthly average USD/TRY buying rate. Sources: HKS, TurkStat, CBRT; authors' calculations (09_makale_tablolari.py).
